@@ -2,10 +2,9 @@ package cheatsheet
 
 import (
 	"os"
-	"path/filepath"
 	"testing"
 
-	"github.com/p1ck4rd/famulus/pkg/parser"
+	"famulus/pkg/parser"
 )
 
 func TestGenerate(t *testing.T) {
@@ -27,12 +26,8 @@ func TestGenerate(t *testing.T) {
 		},
 	}
 
-	refFile := filepath.FromSlash(
-		"../../test/testdata/cheatsheet/output.pdf",
-	)
-	testFile := filepath.FromSlash(
-		"../../test/testdata/cheatsheet/test_output.pdf",
-	)
+	refFile := "testdata/output.pdf"
+	testFile := "testdata/test_output.pdf"
 
 	defer os.Remove(testFile)
 

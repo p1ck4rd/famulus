@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<photoshop-keyboard-shortcuts>
+	<command name="Test Command">
+		<shortcut>Q</shortcut>
+	</command>
+	<command name="Other test Command">
+		<shortcut>Q+W</shortcut>
+	</command>
+	<command name="Command with multiple shortcuts">
+		<shortcut>Q</shortcut>
+		<shortcut>W</shortcut>
+	</command>
+	<command name="Command with nonexistent button">
+		<shortcut>TEST</shortcut>
+	</command>
+	<command name="Command without shortcuts">
+	</command>
+	<command name="Command with special keys">
+		<shortcut>.</shortcut>
+		<shortcut>/</shortcut>
+	</command>
+	<tool name="Test Tool">Q</tool>
+	<tool name="Other test Tool">Q+W</tool>
+	<tool name="Tool with nonexistent button">TEST</tool>
+	<tool name="Tool without shortcuts"></tool>
+	<tool name="Tool with special keys">.</tool>
+</photoshop-keyboard-shortcuts>

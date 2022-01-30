@@ -4,7 +4,8 @@ package cheatsheet
 import (
 	"strings"
 
-	"github.com/p1ck4rd/famulus/pkg/parser"
+	"famulus/pkg/parser"
+
 	"github.com/phpdave11/gofpdf"
 )
 

@@ -3,6 +3,12 @@
 All it takes is a `.kys` file from your preset.
 
 ## Usage
+### GUI
+```sh
+famulus
+```
+
+### CLI
 ```sh
 famulus -i <input_path> -o <output_path>
 ```

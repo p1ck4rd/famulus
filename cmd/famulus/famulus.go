@@ -1,13 +1,11 @@
 package main
 
 import (
-	"errors"
 	"flag"
-	"io/ioutil"
 	"log"
 
-	"github.com/p1ck4rd/famulus/pkg/cheatsheet"
-	"github.com/p1ck4rd/famulus/pkg/parser"
+	"famulus/gui"
+	"famulus/internal/app/famulus"
 )
 
 var (
@@ -20,25 +18,11 @@ func init() {
 }
 
 func main() {
-	if *input == "" {
-		log.Fatal(errors.New("Input path must be specified"))
-	}
-	if *output == "" {
-		log.Fatal(errors.New("Output path must be specified"))
+	if *input == "" && *output == "" {
+		gui.Run()
 	}
 
-	content, err := ioutil.ReadFile(*input)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	res, err := parser.Unmarshal(content)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	err = cheatsheet.Generate(res, *output)
-	if err != nil {
+	if err := famulus.Generate(*input, *output); err != nil {
 		log.Fatal(err)
 	}
 }

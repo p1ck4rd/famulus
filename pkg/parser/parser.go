@@ -42,10 +42,5 @@ func (t *Tool) UnmarshalXML(d *xml.Decoder, start xml.StartElement) error {
 func Unmarshal(content []byte) (*Result, error) {
 	res := new(Result)
 
-	err := xml.Unmarshal(content, &res)
-	if err != nil {
-		return nil, err
-	}
-
-	return res, nil
+	return res, xml.Unmarshal(content, &res)
 }
